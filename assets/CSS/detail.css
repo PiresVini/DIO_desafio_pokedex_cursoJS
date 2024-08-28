@@ -1,0 +1,140 @@
+* {
+    text-transform: capitalize;
+}
+
+.content02 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.titleStatistics {
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .content02 {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 30vw;
+    padding: 1rem;
+    margin: 1rem 10rem;
+    gap: 20px;
+}
+
+.detalhamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    padding: 1rem;
+    margin: 1rem 10rem;
+    gap: 20px;
+}
+
+.picHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    padding: 5px 50px;
+    border-radius: 8px;
+}
+
+.pokephoto {
+    max-width: 100px;
+    width: 400px;
+    height: 100px;
+}
+
+.listStatus {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+    margin: 1rem 5rem;
+    padding: 1.5rem;
+    gap: 5px;
+    align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+    .listStatus {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    border: solid rgba(128, 128, 128, 0.692) 1px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .progress-container {
+        width: 100%;
+        background-color: #f3f3f3;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 20px;
+        border: solid rgba(128, 128, 128, 0.692) 1px;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 0;
+    }
+
+}
+
+.liParamhp {
+    background-color: #bf3029;
+}
+
+.liParamattack {
+    background-color: #dfbf69;
+}
+
+.liParamdefense {
+    background-color: #678fee;
+}
+
+.liParamspecial-attack {
+    background-color: #e9b72d;
+}
+
+.liParamspecial-defense {
+    background-color: #1445b6;
+}
+
+.liParamspeed {
+    background-color: #77c850;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/CSS/global.css">
+    <link rel="stylesheet" href="assets/CSS/detail.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="content02">
+        <div class="container" id="container">
+            <!-- script for cabeçalho aqui -->
+        </div>
+        <div class="detalhamento">
+            <h2>Pokemon Statistcs:</h2>
+            <ul class="listStatus" id="listStatus"></ul>
+            <!-- script for detalhes aqui -->
+        </div>
+
+    </section>
+</body>
+<script src="/assets/JS/pokemon-model.js"></script>
+<script src="/assets/JS/poke_api.js"></script>
+<script src="/assets/JS/main.js"></script>
+<script src="/assets/JS/detail.js"></script>
+<script>
+    const nome = document.getElementById('container')
+
+    window.addEventListener('load', function () {
+        const urlParam = new URLSearchParams(window.location.search);
+        // console.log(window.location.search)
+        // console.log(urlParam)
+        const numParam = urlParam.get('number')
+        const photo = urlParam.get('photo')
+        const name = urlParam.get('name')
+        const tipo = urlParam.get('type')
+        const conteudo = `
+        <div class="picHead ${tipo}" id="picHead">
+        <h1>${name}</h1>
+        <img class="pokephoto" src="${photo}" alt="Imagem pokemon selecionado">
+        <h2>#${numParam}</h2>
+        </div>`
+
+        nome.innerHTML += conteudo
+
+        // console.log(numParam)
+        openDetail(numParam); // Chamando função que mostra detalhes
+    });
+</script>
+
+</html>
